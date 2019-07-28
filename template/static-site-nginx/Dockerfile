@@ -6,7 +6,7 @@ COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
 WORKDIR /usr/share/nginx/html
-COPY . .
+COPY function .
 
 RUN sed -ie s/8080/8082/g /etc/nginx/conf.d/default.conf
 RUN echo -n "daemon off;" | tee -a /etc/nginx/nginx.conf

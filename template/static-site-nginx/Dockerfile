@@ -1,4 +1,4 @@
-FROM openfaas/of-watchdog:0.5.3 as watchdog
+FROM ghcr.io/openfaas/of-watchdog:0.9.13 as watchdog
 
 FROM nginxinc/nginx-unprivileged:mainline
 USER root
